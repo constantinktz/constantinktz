@@ -58,8 +58,8 @@
   <rect class="bar grow d5" x="130" y="234" width="380" height="12" opacity="1.00"/>
   <text class="lbl fade d5" x="566" y="246" text-anchor="end">176</text>
   <text class="lbl fade d6" x="56" y="276">So</text>
-  <rect class="bar grow d6" x="130" y="264" width="374" height="12" opacity="0.99"/>
-  <text class="lbl fade d6" x="566" y="276" text-anchor="end">173</text>
+  <rect class="bar grow d6" x="130" y="264" width="376" height="12" opacity="0.99"/>
+  <text class="lbl fade d6" x="566" y="276" text-anchor="end">174</text>
   <rect class="bar fade y0" x="700" y="240" width="46" height="40" opacity="0.57"/>
   <text class="val fade y0" x="723" y="228" text-anchor="middle">4</text>
   <text class="lbl fade y0" x="723" y="302" text-anchor="middle">2021</text>
