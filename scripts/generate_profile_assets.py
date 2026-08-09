@@ -15,12 +15,15 @@ Gestaltung: Swiss-technisch. Strenges Raster, scharfe Kanten (kein Radius),
 Haarlinien nur als Struktur, ein Akzent, Rang über Deckkraft statt über Farbe.
 
 Motion: Aufbau beim Laden, einmalig, keine Dauerschleifen. Die Heatmap wird von
-links nach rechts durch ein Portal aufgezogen: eine helle Kante wandert über das
-Raster, dahinter erscheint es in voller Farbe.
+links nach rechts durch ein Portal aufgezogen. Eine helle Kante mit geblühtem
+Kern und nachlaufendem Schein wandert über das Raster, dahinter erscheinen die
+Beiträge.
 
-Frame-0-Sicherheit: Unter der Portalschicht liegt dasselbe Raster dauerhaft
-gedimmt. Wo nur der erste Frame gerendert wird (Vorschauen, Social-Cards,
-inaktive Tabs), bleibt die Heatmap dadurch vollständig lesbar statt leer.
+Zwei Ebenen machen das möglich: das leere Kalendergitter liegt dauerhaft da, die
+Beitragsdaten stecken in einer zweiten Ebene hinter einem wachsenden clipPath.
+Vor der Kante ist deshalb nichts von den Daten zu sehen, und wo nur der erste
+Frame gerendert wird (Vorschauen, Social-Cards), steht trotzdem ein intakter
+Kalender statt einer leeren Fläche.
 """
 
 import datetime
@@ -56,7 +59,6 @@ DARK = {
     "bg": "#0D1117", "text": "#E6EDF3", "muted": "#7D8590",
     "rule": "#21262D", "accent": "#39D353",
     "levels": ["#161B22", "#0E4429", "#006D32", "#26A641", "#39D353"],
-    "ghost": "0.22",
 }
 
 LIGHT = {
@@ -64,7 +66,6 @@ LIGHT = {
     "bg": "#FFFFFF", "text": "#1F2328", "muted": "#59636E",
     "rule": "#D8DEE4", "accent": "#1A7F37",
     "levels": ["#EBEDF0", "#9BE9A8", "#40C463", "#30A14E", "#216E39"],
-    "ghost": "0.30",
 }
 
 MONO = ('ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,'
@@ -261,25 +262,27 @@ def build_activity(cal, stats, pal):
            '    .rule{stroke:var(--rule);stroke-width:1}',
            '    .mark{fill:var(--accent)}',
            '',
-           '    /* Portal: die Aufzugsbreite wächst von links nach rechts. Das',
-           '       width-Attribut steht auf der Endbreite, deshalb ist ohne',
-           '       Animation sofort alles sichtbar. */',
+           '    /* Portal: der Aufzug wächst von links nach rechts und legt die',
+           '       Beitragsdaten frei. Vorher steht nur das leere Gitter da, die',
+           '       Daten selbst sind noch nicht sichtbar.',
+           '       Das width-Attribut trägt die Endbreite, deshalb zeigt',
+           '       prefers-reduced-motion sofort alles. */',
            '    @keyframes portal{from{width:0}to{width:%dpx}}' % grid_w,
-           '    #pr{animation:portal 1.6s cubic-bezier(.22,.85,.24,1) both}',
-           '    /* Die helle Kante läuft mit derselben Kurve, bleibt also exakt',
-           '       auf der Aufzugsgrenze. */',
+           '    #pr{animation:portal 2.8s cubic-bezier(.32,.02,.28,1) both}',
+           '    /* Kante und Aufzugsgrenze teilen Dauer und Kurve, laufen also',
+           '       exakt synchron. */',
            '    @keyframes edge{',
            '      0%{transform:translateX(0);opacity:0}',
-           '      7%{opacity:1}',
-           '      84%{opacity:1}',
+           '      4%{opacity:1}',
+           '      88%{opacity:1}',
            '      100%%{transform:translateX(%dpx);opacity:0}}' % grid_w,
-           '    .edge{animation:edge 1.6s cubic-bezier(.22,.85,.24,1) both}',
+           '    .edge{animation:edge 2.8s cubic-bezier(.32,.02,.28,1) both}',
            '    @keyframes fade{from{opacity:.25}to{opacity:1}}',
            '    @keyframes draw{from{stroke-dashoffset:%d}to{stroke-dashoffset:0}}' % span,
            '    .f{animation:fade .7s ease-out both}',
            '    .d{stroke-dasharray:%d;animation:draw .9s cubic-bezier(.2,.8,.25,1) both}' % span,
-           '    .s1{animation-delay:.9s}.s2{animation-delay:1.0s}.s3{animation-delay:1.1s}',
-           '    .s4{animation-delay:1.2s}.s5{animation-delay:1.3s}',
+           '    .s1{animation-delay:2.5s}.s2{animation-delay:2.62s}.s3{animation-delay:2.74s}',
+           '    .s4{animation-delay:2.86s}.s5{animation-delay:2.98s}',
            '',
            '    @media (prefers-reduced-motion:reduce){',
            '      #pr{animation:none}',
@@ -290,10 +293,14 @@ def build_activity(cal, stats, pal):
            '  </style>']
     add = out.append
 
-    # Kalender einmal definieren, zweimal einsetzen: gedimmt als Grundschicht,
-    # in voller Farbe durch das Portal.
+    # Zwei Ebenen: das leere Gitter liegt dauerhaft da, die eigentlichen
+    # Beiträge kommen durch das Portal. Dadurch ist vorher nichts von den Daten
+    # zu sehen, und ein erster Frame zeigt trotzdem einen intakten Kalender
+    # statt einer leeren Fläche.
     add('  <defs>')
-    add('    <g id="cal">')
+    today = datetime.date.today().isoformat()
+
+    add('    <g id="skel">')
     last_month = None
     for i, week in enumerate(weeks):
         month = int(week[0]["date"][5:7])
@@ -303,9 +310,6 @@ def build_activity(cal, stats, pal):
                 add('      <text class="mon" x="%d" y="%d">%s</text>'
                     % (x, GRID_Y - 14, MONTHS_DE[month - 1]))
             last_month = month
-
-    today = datetime.date.today().isoformat()
-    today_col = None
     for i, week in enumerate(weeks):
         for day in week:
             if day["date"] > today:
@@ -313,18 +317,37 @@ def build_activity(cal, stats, pal):
             row = WEEKDAY_ORDER.index(day["weekday"])
             add('      <rect x="%d" y="%d" width="%d" height="%d" fill="%s"/>'
                 % (GRID_X + i * STEP, GRID_Y + row * STEP, CELL, CELL,
-                   pal["levels"][day["level"]]))
+                   pal["levels"][0]))
+    add('    </g>')
+
+    today_col = None
+    add('    <g id="data">')
+    for i, week in enumerate(weeks):
+        for day in week:
+            if day["date"] > today:
+                continue
             if day["date"] == today:
                 today_col = i
+            if day["level"] == 0:
+                continue
+            row = WEEKDAY_ORDER.index(day["weekday"])
+            add('      <rect x="%d" y="%d" width="%d" height="%d" fill="%s"/>'
+                % (GRID_X + i * STEP, GRID_Y + row * STEP, CELL, CELL,
+                   pal["levels"][day["level"]]))
     add('    </g>')
+
     add('    <clipPath id="portal">')
     add('      <rect id="pr" x="%d" y="%d" width="%d" height="%d"/>'
         % (GRID_X, portal_y, grid_w, portal_h))
     add('    </clipPath>')
     add('    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">')
     add('      <stop offset="0" stop-color="%s" stop-opacity="0"/>' % pal["accent"])
-    add('      <stop offset="1" stop-color="%s" stop-opacity=".38"/>' % pal["accent"])
+    add('      <stop offset=".72" stop-color="%s" stop-opacity=".30"/>' % pal["accent"])
+    add('      <stop offset="1" stop-color="%s" stop-opacity=".62"/>' % pal["accent"])
     add('    </linearGradient>')
+    add('    <filter id="bloom" x="-400%" y="-25%" width="900%" height="150%">')
+    add('      <feGaussianBlur stdDeviation="7"/>')
+    add('    </filter>')
     add('  </defs>')
 
     add('  <rect class="bg" width="%d" height="%d"/>' % (W, height))
@@ -335,15 +358,18 @@ def build_activity(cal, stats, pal):
         add('  <text class="lbl f" x="%d" y="%d" text-anchor="end">%s</text>'
             % (GRID_X - 12, GRID_Y + idx * STEP + CELL - 4, name))
 
-    add('  <use href="#cal" xlink:href="#cal" opacity="%s"/>' % pal["ghost"])
-    add('  <g clip-path="url(#portal)"><use href="#cal" xlink:href="#cal"/></g>')
+    add('  <use href="#skel" xlink:href="#skel"/>')
+    add('  <g clip-path="url(#portal)"><use href="#data" xlink:href="#data"/></g>')
 
-    # Portalkante: nachlaufender Schein plus harte Linie an der Grenze.
+    # Portalkante: breiter nachlaufender Schein, geblühter Kern und harte Linie
+    # genau auf der Aufzugsgrenze.
     add('  <g class="edge">')
-    add('    <rect x="%d" y="%d" width="72" height="%d" fill="url(#glow)"/>'
-        % (GRID_X - 72, portal_y, portal_h))
+    add('    <rect x="%d" y="%d" width="170" height="%d" fill="url(#glow)"/>'
+        % (GRID_X - 170, portal_y, portal_h))
+    add('    <rect class="mark" x="%d" y="%d" width="4" height="%d" filter="url(#bloom)"/>'
+        % (GRID_X - 1, portal_y - 6, portal_h + 12))
     add('    <rect class="mark" x="%d" y="%d" width="2" height="%d"/>'
-        % (GRID_X, portal_y, portal_h))
+        % (GRID_X, portal_y - 6, portal_h + 12))
     add('  </g>')
 
     if today_col is not None:
