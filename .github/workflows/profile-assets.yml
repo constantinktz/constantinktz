@@ -1,0 +1,72 @@
+name: Profil-Assets aktualisieren
+
+# Erzeugt Heatmap und Sprachverteilung neu und committet sie, wenn sie sich
+# geändert haben. Die Heatmap verschiebt sich täglich um einen Tag, es ist also
+# normal, dass hier einmal pro Tag ein Commit entsteht.
+#
+# Voraussetzung: das Secret PROFILE_TOKEN.
+#   Scopes: read:user  → Contribution-Kalender inklusive privater Beiträge
+#           repo       → Sprachanteile privater Repositories
+# Mit dem normalen GITHUB_TOKEN wären es nur die öffentlichen Beiträge, das
+# wären derzeit 4 von 896 — die Heatmap wäre praktisch leer.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_profile_assets.py'
+      - '.github/workflows/profile-assets.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Secret prüfen
+        env:
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: |
+          if [ -z "$PROFILE_TOKEN" ]; then
+            echo "::error::Secret PROFILE_TOKEN fehlt. Anlegen unter Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Assets erzeugen
+        env:
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+          PROFILE_LOGIN: ${{ github.repository_owner }}
+        run: python scripts/generate_profile_assets.py
+
+      - name: Auf gültiges XML prüfen
+        run: |
+          for f in assets/activity-*.svg assets/languages-*.svg; do
+            python -c "import xml.dom.minidom,sys; xml.dom.minidom.parse(sys.argv[1])" "$f"
+            echo "ok  $f"
+          done
+
+      - name: Bei Änderung committen
+        run: |
+          if [ -z "$(git status --porcelain assets)" ]; then
+            echo "Keine Änderung — kein Commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git commit -m "chore: Profil-Assets aktualisiert"
+          git push

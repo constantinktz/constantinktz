@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 380" width="1280" height="380" role="img" aria-label="Sprachverteilung nach Codegröße">
+  <title>Sprachverteilung</title>
+  <style>
+    svg{--bg:#0D1117;--panel:#161B22;--line:#30363D;--text:#E6EDF3;--muted:#8B949E;--mono:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;--sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif}
+    .bg{fill:var(--bg)}
+    .cap{font-family:var(--mono);font-size:17px;fill:var(--muted);letter-spacing:1.6px}
+    .lang{font-family:var(--mono);font-size:19px;fill:var(--text)}
+    .pct{font-family:var(--mono);font-size:18px;fill:var(--muted)}
+    .track{fill:var(--panel);stroke:var(--line);stroke-width:1}
+    .glow{fill:url(#gl);animation:run 6.5s cubic-bezier(.45,0,.55,1) infinite}
+    @keyframes run{0%{transform:translateX(-200px)}70%,100%{transform:translateX(1030px)}}
+    .g0{animation-delay:0.00s}
+    .g1{animation-delay:0.16s}
+    .g2{animation-delay:0.32s}
+    .g3{animation-delay:0.48s}
+    .g4{animation-delay:0.64s}
+    .g5{animation-delay:0.80s}
+    .g6{animation-delay:0.96s}
+    @media (prefers-reduced-motion:reduce){.glow{display:none}}
+  </style>
+  <defs>
+    <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#FFFFFF" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect class="bg" width="1280" height="380"/>
+  <text class="cap" x="58" y="34">SPRACHEN · 38 REPOSITORIES · JE REPOSITORY GLEICH GEWICHTET</text>
+  <text class="lang" x="58" y="89">TypeScript</text>
+  <rect class="track" x="248" y="74" width="830" height="20" rx="10"/>
+  <rect x="248" y="74" width="198" height="20" rx="10" fill="#3178c6"/>
+  <clipPath id="c0"><rect x="248" y="74" width="198" height="20" rx="10"/></clipPath>
+  <g clip-path="url(#c0)"><rect class="glow g0" x="248" y="74" width="200" height="20"/></g>
+  <text class="pct" x="1162" y="89" text-anchor="end">23.8&#37;</text>
+  <text class="lang" x="58" y="129">Python</text>
+  <rect class="track" x="248" y="114" width="830" height="20" rx="10"/>
+  <rect x="248" y="114" width="176" height="20" rx="10" fill="#3572A5"/>
+  <clipPath id="c1"><rect x="248" y="114" width="176" height="20" rx="10"/></clipPath>
+  <g clip-path="url(#c1)"><rect class="glow g1" x="248" y="114" width="200" height="20"/></g>
+  <text class="pct" x="1162" y="129" text-anchor="end">21.2&#37;</text>
+  <text class="lang" x="58" y="169">JavaScript</text>
+  <rect class="track" x="248" y="154" width="830" height="20" rx="10"/>
+  <rect x="248" y="154" width="87" height="20" rx="10" fill="#f1e05a"/>
+  <clipPath id="c2"><rect x="248" y="154" width="87" height="20" rx="10"/></clipPath>
+  <g clip-path="url(#c2)"><rect class="glow g2" x="248" y="154" width="200" height="20"/></g>
+  <text class="pct" x="1162" y="169" text-anchor="end">10.4&#37;</text>
+  <text class="lang" x="58" y="209">HTML</text>
+  <rect class="track" x="248" y="194" width="830" height="20" rx="10"/>
+  <rect x="248" y="194" width="81" height="20" rx="10" fill="#e34c26"/>
+  <clipPath id="c3"><rect x="248" y="194" width="81" height="20" rx="10"/></clipPath>
+  <g clip-path="url(#c3)"><rect class="glow g3" x="248" y="194" width="200" height="20"/></g>
+  <text class="pct" x="1162" y="209" text-anchor="end">9.7&#37;</text>
+  <text class="lang" x="58" y="249">Vue</text>
+  <rect class="track" x="248" y="234" width="830" height="20" rx="10"/>
+  <rect x="248" y="234" width="71" height="20" rx="10" fill="#41b883"/>
+  <clipPath id="c4"><rect x="248" y="234" width="71" height="20" rx="10"/></clipPath>
+  <g clip-path="url(#c4)"><rect class="glow g4" x="248" y="234" width="200" height="20"/></g>
+  <text class="pct" x="1162" y="249" text-anchor="end">8.6&#37;</text>
+  <text class="lang" x="58" y="289">C#</text>
+  <rect class="track" x="248" y="274" width="830" height="20" rx="10"/>
+  <rect x="248" y="274" width="45" height="20" rx="10" fill="#178600"/>
+  <clipPath id="c5"><rect x="248" y="274" width="45" height="20" rx="10"/></clipPath>
+  <g clip-path="url(#c5)"><rect class="glow g5" x="248" y="274" width="200" height="20"/></g>
+  <text class="pct" x="1162" y="289" text-anchor="end">5.4&#37;</text>
+  <text class="lang" x="58" y="329">Dart</text>
+  <rect class="track" x="248" y="314" width="830" height="20" rx="10"/>
+  <rect x="248" y="314" width="42" height="20" rx="10" fill="#00B4AB"/>
+  <clipPath id="c6"><rect x="248" y="314" width="42" height="20" rx="10"/></clipPath>
+  <g clip-path="url(#c6)"><rect class="glow g6" x="248" y="314" width="200" height="20"/></g>
+  <text class="pct" x="1162" y="329" text-anchor="end">5.1&#37;</text>
+</svg>
