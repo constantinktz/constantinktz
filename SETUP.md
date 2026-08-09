@@ -1,6 +1,6 @@
 # Einrichtung
 
-Diese Datei gehört nicht ins Profil — `README.md` ist die öffentliche Profilseite.
+Diese Datei gehört nicht ins Profil. `README.md` ist die öffentliche Profilseite.
 
 ## Secret anlegen
 
@@ -27,7 +27,8 @@ Meldung ab, statt eine leere Heatmap zu committen.
 ## Warum ein PAT und nicht `GITHUB_TOKEN`
 
 Das automatisch bereitgestellte `GITHUB_TOKEN` sieht nur öffentliche Beiträge.
-Bei diesem Konto sind das 4 von 897 — die Heatmap wäre praktisch leer.
+Bei diesem Konto ist das ein Bruchteil der tatsächlichen Beiträge, die Heatmap
+wäre praktisch leer.
 
 Das bedeutet umgekehrt: mit dem PAT wird das zeitliche Muster der Arbeit in
 privaten Repositories öffentlich sichtbar, Tage und Intensität. Repository-Namen,
@@ -54,7 +55,7 @@ env:
   PROFILE_EXCLUDE: open-webui,noch-ein-klon
 ```
 
-Zusätzlich wird jedes Repository gleich gewichtet statt nach Bytes — sonst
+Zusätzlich wird jedes Repository gleich gewichtet statt nach Bytes, sonst
 bestimmt ein einzelnes Repo mit gebündeltem Code die gesamte Statistik.
 
 ## Zeitplan

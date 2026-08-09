@@ -8,7 +8,7 @@ name: Profil-Assets aktualisieren
 #   Scopes: read:user  → Contribution-Kalender inklusive privater Beiträge
 #           repo       → Sprachanteile privater Repositories
 # Mit dem normalen GITHUB_TOKEN wären es nur die öffentlichen Beiträge, das
-# wären derzeit 4 von 896 — die Heatmap wäre praktisch leer.
+# wäre nur ein Bruchteil der tatsächlichen Beiträge, die Heatmap praktisch leer.
 
 on:
   schedule:
@@ -54,7 +54,7 @@ jobs:
 
       - name: Auf gültiges XML prüfen
         run: |
-          for f in assets/activity-*.svg assets/languages-*.svg; do
+          for f in assets/activity-*.svg assets/languages-*.svg assets/rhythm-*.svg; do
             python -c "import xml.dom.minidom,sys; xml.dom.minidom.parse(sys.argv[1])" "$f"
             echo "ok  $f"
           done
@@ -62,7 +62,7 @@ jobs:
       - name: Bei Änderung committen
         run: |
           if [ -z "$(git status --porcelain assets)" ]; then
-            echo "Keine Änderung — kein Commit."
+            echo "Keine Änderung, kein Commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"

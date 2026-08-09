@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 334" width="1280" height="334" role="img" aria-label="Verteilung über die Woche und Projekte pro Jahr">
+  <title>Rhythmus</title>
+  <style>
+    svg{--bg:#FFFFFF;--text:#1F2328;--muted:#59636E;--rule:#D8DEE4;--accent:#1A7F37;--mono:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;--sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif}
+    .bg{fill:var(--bg)}
+    .cap{font-family:var(--mono);font-size:17px;fill:var(--muted)}
+    .rule{stroke:var(--rule);stroke-width:1}
+    .lbl{font-family:var(--mono);font-size:15px;fill:var(--muted)}
+    .val{font-family:var(--mono);font-size:18px;fill:var(--text)}
+    .big{font-family:var(--sans);font-weight:700;font-size:30px;fill:var(--text)}
+    .bar{fill:var(--accent)}
+    @keyframes cell{from{opacity:.18;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+    @keyframes grow{from{opacity:.2;transform:scaleX(.86)}to{opacity:1;transform:scaleX(1)}}
+    @keyframes fade{from{opacity:.25}to{opacity:1}}
+    @keyframes draw{from{stroke-dashoffset:1168}to{stroke-dashoffset:0}}
+    .cell{transform-box:fill-box;transform-origin:center;animation:cell .5s cubic-bezier(.2,.8,.25,1) both}
+    .grow{transform-box:fill-box;transform-origin:left center;animation:grow .7s cubic-bezier(.2,.8,.25,1) both}
+    .fade{animation:fade .6s ease-out both}
+    .draw{stroke-dasharray:1168;animation:draw .8s cubic-bezier(.2,.8,.25,1) both}
+    .d0{animation-delay:0.06s}
+    .d1{animation-delay:0.12s}
+    .d2{animation-delay:0.18s}
+    .d3{animation-delay:0.24s}
+    .d4{animation-delay:0.30s}
+    .d5{animation-delay:0.36s}
+    .d6{animation-delay:0.42s}
+    .y0{animation-delay:0.10s}
+    .y1{animation-delay:0.17s}
+    .y2{animation-delay:0.24s}
+    .y3{animation-delay:0.31s}
+    .y4{animation-delay:0.38s}
+    .y5{animation-delay:0.45s}
+    @media (prefers-reduced-motion:reduce){
+      .cell,.grow,.fade{animation:none;opacity:1;transform:none}
+      .draw{animation:none;stroke-dashoffset:0}
+    }
+  </style>
+  <rect class="bg" width="1280" height="334"/>
+  <text class="cap fade" x="56" y="38">Verteilung über die Woche</text>
+  <text class="cap fade" x="700" y="38">Projekte pro Jahr</text>
+  <path class="rule draw" d="M56 56H1224"/>
+  <text class="lbl fade d0" x="56" y="96">Mo</text>
+  <rect class="bar grow d0" x="130" y="84" width="255" height="12" opacity="0.81"/>
+  <text class="lbl fade d0" x="566" y="96" text-anchor="end">118</text>
+  <text class="lbl fade d1" x="56" y="126">Di</text>
+  <rect class="bar grow d1" x="130" y="114" width="242" height="12" opacity="0.79"/>
+  <text class="lbl fade d1" x="566" y="126" text-anchor="end">112</text>
+  <text class="lbl fade d2" x="56" y="156">Mi</text>
+  <rect class="bar grow d2" x="130" y="144" width="203" height="12" opacity="0.73"/>
+  <text class="lbl fade d2" x="566" y="156" text-anchor="end">94</text>
+  <text class="lbl fade d3" x="56" y="186">Do</text>
+  <rect class="bar grow d3" x="130" y="174" width="268" height="12" opacity="0.83"/>
+  <text class="lbl fade d3" x="566" y="186" text-anchor="end">124</text>
+  <text class="lbl fade d4" x="56" y="216">Fr</text>
+  <rect class="bar grow d4" x="130" y="204" width="229" height="12" opacity="0.77"/>
+  <text class="lbl fade d4" x="566" y="216" text-anchor="end">106</text>
+  <text class="lbl fade d5" x="56" y="246">Sa</text>
+  <rect class="bar grow d5" x="130" y="234" width="380" height="12" opacity="1.00"/>
+  <text class="lbl fade d5" x="566" y="246" text-anchor="end">176</text>
+  <text class="lbl fade d6" x="56" y="276">So</text>
+  <rect class="bar grow d6" x="130" y="264" width="374" height="12" opacity="0.99"/>
+  <text class="lbl fade d6" x="566" y="276" text-anchor="end">173</text>
+  <rect class="bar fade y0" x="700" y="240" width="46" height="40" opacity="0.57"/>
+  <text class="val fade y0" x="723" y="228" text-anchor="middle">4</text>
+  <text class="lbl fade y0" x="723" y="302" text-anchor="middle">2021</text>
+  <rect class="bar fade y1" x="772" y="220" width="46" height="60" opacity="0.65"/>
+  <text class="val fade y1" x="795" y="208" text-anchor="middle">6</text>
+  <text class="lbl fade y1" x="795" y="302" text-anchor="middle">2022</text>
+  <rect class="bar fade y2" x="844" y="260" width="46" height="20" opacity="0.50"/>
+  <text class="val fade y2" x="867" y="248" text-anchor="middle">2</text>
+  <text class="lbl fade y2" x="867" y="302" text-anchor="middle">2023</text>
+  <rect class="bar fade y3" x="916" y="240" width="46" height="40" opacity="0.57"/>
+  <text class="val fade y3" x="939" y="228" text-anchor="middle">4</text>
+  <text class="lbl fade y3" x="939" y="302" text-anchor="middle">2024</text>
+  <rect class="bar fade y4" x="988" y="160" width="46" height="120" opacity="0.88"/>
+  <text class="val fade y4" x="1011" y="148" text-anchor="middle">12</text>
+  <text class="lbl fade y4" x="1011" y="302" text-anchor="middle">2025</text>
+  <rect class="bar fade y5" x="1060" y="130" width="46" height="150" opacity="1.00"/>
+  <text class="val fade y5" x="1083" y="118" text-anchor="middle">15</text>
+  <text class="lbl fade y5" x="1083" y="302" text-anchor="middle">2026</text>
+</svg>

@@ -1,72 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 380" width="1280" height="380" role="img" aria-label="Sprachverteilung nach Codegröße">
-  <title>Sprachverteilung</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 376" width="1280" height="376" role="img" aria-label="Sprachverteilung über 39 Repositories">
+  <title>Sprachen</title>
   <style>
-    svg{--bg:#FFFFFF;--panel:#F6F8FA;--line:#D0D7DE;--text:#1F2328;--muted:#59636E;--mono:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;--sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif}
+    svg{--bg:#FFFFFF;--text:#1F2328;--muted:#59636E;--rule:#D8DEE4;--accent:#1A7F37;--mono:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;--sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif}
     .bg{fill:var(--bg)}
-    .cap{font-family:var(--mono);font-size:17px;fill:var(--muted);letter-spacing:1.6px}
-    .lang{font-family:var(--mono);font-size:19px;fill:var(--text)}
-    .pct{font-family:var(--mono);font-size:18px;fill:var(--muted)}
-    .track{fill:var(--panel);stroke:var(--line);stroke-width:1}
-    .glow{fill:url(#gl);animation:run 6.5s cubic-bezier(.45,0,.55,1) infinite}
-    @keyframes run{0%{transform:translateX(-200px)}70%,100%{transform:translateX(1030px)}}
-    .g0{animation-delay:0.00s}
-    .g1{animation-delay:0.16s}
-    .g2{animation-delay:0.32s}
-    .g3{animation-delay:0.48s}
-    .g4{animation-delay:0.64s}
-    .g5{animation-delay:0.80s}
-    .g6{animation-delay:0.96s}
-    @media (prefers-reduced-motion:reduce){.glow{display:none}}
+    .cap{font-family:var(--mono);font-size:17px;fill:var(--muted)}
+    .rule{stroke:var(--rule);stroke-width:1}
+    .lbl{font-family:var(--mono);font-size:15px;fill:var(--muted)}
+    .val{font-family:var(--mono);font-size:18px;fill:var(--text)}
+    .big{font-family:var(--sans);font-weight:700;font-size:30px;fill:var(--text)}
+    .bar{fill:var(--accent)}
+    @keyframes cell{from{opacity:.18;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+    @keyframes grow{from{opacity:.2;transform:scaleX(.86)}to{opacity:1;transform:scaleX(1)}}
+    @keyframes fade{from{opacity:.25}to{opacity:1}}
+    @keyframes draw{from{stroke-dashoffset:1168}to{stroke-dashoffset:0}}
+    .cell{transform-box:fill-box;transform-origin:center;animation:cell .5s cubic-bezier(.2,.8,.25,1) both}
+    .grow{transform-box:fill-box;transform-origin:left center;animation:grow .7s cubic-bezier(.2,.8,.25,1) both}
+    .fade{animation:fade .6s ease-out both}
+    .draw{stroke-dasharray:1168;animation:draw .8s cubic-bezier(.2,.8,.25,1) both}
+    .r0{animation-delay:0.06s}
+    .r1{animation-delay:0.13s}
+    .r2{animation-delay:0.20s}
+    .r3{animation-delay:0.27s}
+    .r4{animation-delay:0.34s}
+    .r5{animation-delay:0.41s}
+    .r6{animation-delay:0.48s}
+    @media (prefers-reduced-motion:reduce){
+      .cell,.grow,.fade{animation:none;opacity:1;transform:none}
+      .draw{animation:none;stroke-dashoffset:0}
+    }
   </style>
-  <defs>
-    <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#1A7F37" stop-opacity="0"/>
-      <stop offset=".5" stop-color="#1A7F37" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#1A7F37" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <rect class="bg" width="1280" height="380"/>
-  <text class="cap" x="58" y="34">SPRACHEN · 39 REPOSITORIES · JE REPOSITORY GLEICH GEWICHTET</text>
-  <text class="lang" x="58" y="89">Python</text>
-  <rect class="track" x="248" y="74" width="830" height="20" rx="10"/>
-  <rect x="248" y="74" width="193" height="20" rx="10" fill="#3572A5"/>
-  <clipPath id="c0"><rect x="248" y="74" width="193" height="20" rx="10"/></clipPath>
-  <g clip-path="url(#c0)"><rect class="glow g0" x="248" y="74" width="200" height="20"/></g>
-  <text class="pct" x="1162" y="89" text-anchor="end">23.3&#37;</text>
-  <text class="lang" x="58" y="129">TypeScript</text>
-  <rect class="track" x="248" y="114" width="830" height="20" rx="10"/>
-  <rect x="248" y="114" width="193" height="20" rx="10" fill="#3178c6"/>
-  <clipPath id="c1"><rect x="248" y="114" width="193" height="20" rx="10"/></clipPath>
-  <g clip-path="url(#c1)"><rect class="glow g1" x="248" y="114" width="200" height="20"/></g>
-  <text class="pct" x="1162" y="129" text-anchor="end">23.2&#37;</text>
-  <text class="lang" x="58" y="169">JavaScript</text>
-  <rect class="track" x="248" y="154" width="830" height="20" rx="10"/>
-  <rect x="248" y="154" width="84" height="20" rx="10" fill="#f1e05a"/>
-  <clipPath id="c2"><rect x="248" y="154" width="84" height="20" rx="10"/></clipPath>
-  <g clip-path="url(#c2)"><rect class="glow g2" x="248" y="154" width="200" height="20"/></g>
-  <text class="pct" x="1162" y="169" text-anchor="end">10.2&#37;</text>
-  <text class="lang" x="58" y="209">HTML</text>
-  <rect class="track" x="248" y="194" width="830" height="20" rx="10"/>
-  <rect x="248" y="194" width="79" height="20" rx="10" fill="#e34c26"/>
-  <clipPath id="c3"><rect x="248" y="194" width="79" height="20" rx="10"/></clipPath>
-  <g clip-path="url(#c3)"><rect class="glow g3" x="248" y="194" width="200" height="20"/></g>
-  <text class="pct" x="1162" y="209" text-anchor="end">9.5&#37;</text>
-  <text class="lang" x="58" y="249">Vue</text>
-  <rect class="track" x="248" y="234" width="830" height="20" rx="10"/>
-  <rect x="248" y="234" width="70" height="20" rx="10" fill="#41b883"/>
-  <clipPath id="c4"><rect x="248" y="234" width="70" height="20" rx="10"/></clipPath>
-  <g clip-path="url(#c4)"><rect class="glow g4" x="248" y="234" width="200" height="20"/></g>
-  <text class="pct" x="1162" y="249" text-anchor="end">8.4&#37;</text>
-  <text class="lang" x="58" y="289">C#</text>
-  <rect class="track" x="248" y="274" width="830" height="20" rx="10"/>
-  <rect x="248" y="274" width="44" height="20" rx="10" fill="#178600"/>
-  <clipPath id="c5"><rect x="248" y="274" width="44" height="20" rx="10"/></clipPath>
-  <g clip-path="url(#c5)"><rect class="glow g5" x="248" y="274" width="200" height="20"/></g>
-  <text class="pct" x="1162" y="289" text-anchor="end">5.3&#37;</text>
-  <text class="lang" x="58" y="329">Dart</text>
-  <rect class="track" x="248" y="314" width="830" height="20" rx="10"/>
-  <rect x="248" y="314" width="41" height="20" rx="10" fill="#00B4AB"/>
-  <clipPath id="c6"><rect x="248" y="314" width="41" height="20" rx="10"/></clipPath>
-  <g clip-path="url(#c6)"><rect class="glow g6" x="248" y="314" width="200" height="20"/></g>
-  <text class="pct" x="1162" y="329" text-anchor="end">5.0&#37;</text>
+  <rect class="bg" width="1280" height="376"/>
+  <text class="cap fade" x="56" y="38">Sprachen über 39 Repositories, je Repository gleich gewichtet</text>
+  <path class="rule draw" d="M56 56H1224"/>
+  <text class="val fade r0" x="56" y="96">Python</text>
+  <rect class="rule" x="270" y="91" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <rect class="bar grow r0" x="270" y="84" width="184" height="14" opacity="1.00"/>
+  <text class="val fade r0" x="1224" y="96" text-anchor="end">23.3&#37;</text>
+  <text class="val fade r1" x="56" y="134">TypeScript</text>
+  <rect class="rule" x="270" y="129" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <rect class="bar grow r1" x="270" y="122" width="183" height="14" opacity="0.89"/>
+  <text class="val fade r1" x="1224" y="134" text-anchor="end">23.2&#37;</text>
+  <text class="val fade r2" x="56" y="172">JavaScript</text>
+  <rect class="rule" x="270" y="167" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <rect class="bar grow r2" x="270" y="160" width="80" height="14" opacity="0.78"/>
+  <text class="val fade r2" x="1224" y="172" text-anchor="end">10.2&#37;</text>
+  <text class="val fade r3" x="56" y="210">HTML</text>
+  <rect class="rule" x="270" y="205" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <rect class="bar grow r3" x="270" y="198" width="75" height="14" opacity="0.67"/>
+  <text class="val fade r3" x="1224" y="210" text-anchor="end">9.5&#37;</text>
+  <text class="val fade r4" x="56" y="248">Vue</text>
+  <rect class="rule" x="270" y="243" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <rect class="bar grow r4" x="270" y="236" width="66" height="14" opacity="0.56"/>
+  <text class="val fade r4" x="1224" y="248" text-anchor="end">8.4&#37;</text>
+  <text class="val fade r5" x="56" y="286">C#</text>
+  <rect class="rule" x="270" y="281" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <rect class="bar grow r5" x="270" y="274" width="42" height="14" opacity="0.45"/>
+  <text class="val fade r5" x="1224" y="286" text-anchor="end">5.3&#37;</text>
+  <text class="val fade r6" x="56" y="324">Dart</text>
+  <rect class="rule" x="270" y="319" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <rect class="bar grow r6" x="270" y="312" width="39" height="14" opacity="0.34"/>
+  <text class="val fade r6" x="1224" y="324" text-anchor="end">5.0&#37;</text>
 </svg>
