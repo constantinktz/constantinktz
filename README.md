@@ -6,7 +6,7 @@
   <img src="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/banner-dark.svg" alt="Constantin Kautz — Fullstack von Python-Backends und KI bis TypeScript-Frontends und Flutter-Apps" width="100%">
 </picture>
 
-### Fullstack, absichtlich breit.
+### Fullstack
 
 <sub>Python-Backends und KI, TypeScript- und Vue-Frontends, Flutter auf Mobile, C# und Java, wenn es passt.<br>Dortmund · Webprojekte unter <a href="https://github.com/kautzkielholz">@kautzkielholz</a></sub>
 
