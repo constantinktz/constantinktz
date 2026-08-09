@@ -1,22 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 376" width="1280" height="376" role="img" aria-label="Sprachverteilung über 39 Repositories">
   <title>Sprachen</title>
   <style>
-    svg{--bg:#0D1117;--text:#E6EDF3;--muted:#7D8590;--rule:#21262D;--accent:#39D353;--mono:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;--sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif}
+    svg{--bg:#0D1117;--text:#E6EDF3;--muted:#7D8590;--rule:#21262D;--accent:#39D353;--mono:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace}
     .bg{fill:var(--bg)}
     .cap{font-family:var(--mono);font-size:17px;fill:var(--muted)}
-    .rule{stroke:var(--rule);stroke-width:1}
-    .lbl{font-family:var(--mono);font-size:15px;fill:var(--muted)}
     .val{font-family:var(--mono);font-size:18px;fill:var(--text)}
-    .big{font-family:var(--sans);font-weight:700;font-size:30px;fill:var(--text)}
+    .rule{stroke:var(--rule);stroke-width:1}
     .bar{fill:var(--accent)}
-    @keyframes cell{from{opacity:.18;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
     @keyframes grow{from{opacity:.2;transform:scaleX(.86)}to{opacity:1;transform:scaleX(1)}}
     @keyframes fade{from{opacity:.25}to{opacity:1}}
     @keyframes draw{from{stroke-dashoffset:1168}to{stroke-dashoffset:0}}
-    .cell{transform-box:fill-box;transform-origin:center;animation:cell .5s cubic-bezier(.2,.8,.25,1) both}
     .grow{transform-box:fill-box;transform-origin:left center;animation:grow .7s cubic-bezier(.2,.8,.25,1) both}
-    .fade{animation:fade .6s ease-out both}
-    .draw{stroke-dasharray:1168;animation:draw .8s cubic-bezier(.2,.8,.25,1) both}
+    .f{animation:fade .6s ease-out both}
+    .d{stroke-dasharray:1168;animation:draw .9s cubic-bezier(.2,.8,.25,1) both}
     .r0{animation-delay:0.06s}
     .r1{animation-delay:0.13s}
     .r2{animation-delay:0.20s}
@@ -25,39 +21,39 @@
     .r5{animation-delay:0.41s}
     .r6{animation-delay:0.48s}
     @media (prefers-reduced-motion:reduce){
-      .cell,.grow,.fade{animation:none;opacity:1;transform:none}
-      .draw{animation:none;stroke-dashoffset:0}
+      .grow,.f{animation:none;opacity:1;transform:none}
+      .d{animation:none;stroke-dashoffset:0}
     }
   </style>
   <rect class="bg" width="1280" height="376"/>
-  <text class="cap fade" x="56" y="38">Sprachen über 39 Repositories, je Repository gleich gewichtet</text>
-  <path class="rule draw" d="M56 56H1224"/>
-  <text class="val fade r0" x="56" y="96">Python</text>
-  <rect class="rule" x="270" y="91" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <text class="cap f" x="56" y="38">Sprachen über 39 Repositories, je Repository gleich gewichtet</text>
+  <path class="rule d" d="M56 56H1224"/>
+  <text class="val f r0" x="56" y="96">Python</text>
+  <rect x="270" y="91" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r0" x="270" y="84" width="184" height="14" opacity="1.00"/>
-  <text class="val fade r0" x="1224" y="96" text-anchor="end">23.3&#37;</text>
-  <text class="val fade r1" x="56" y="134">TypeScript</text>
-  <rect class="rule" x="270" y="129" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <text class="val f r0" x="1224" y="96" text-anchor="end">23.3&#37;</text>
+  <text class="val f r1" x="56" y="134">TypeScript</text>
+  <rect x="270" y="129" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r1" x="270" y="122" width="183" height="14" opacity="0.89"/>
-  <text class="val fade r1" x="1224" y="134" text-anchor="end">23.2&#37;</text>
-  <text class="val fade r2" x="56" y="172">JavaScript</text>
-  <rect class="rule" x="270" y="167" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <text class="val f r1" x="1224" y="134" text-anchor="end">23.2&#37;</text>
+  <text class="val f r2" x="56" y="172">JavaScript</text>
+  <rect x="270" y="167" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r2" x="270" y="160" width="80" height="14" opacity="0.78"/>
-  <text class="val fade r2" x="1224" y="172" text-anchor="end">10.2&#37;</text>
-  <text class="val fade r3" x="56" y="210">HTML</text>
-  <rect class="rule" x="270" y="205" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <text class="val f r2" x="1224" y="172" text-anchor="end">10.2&#37;</text>
+  <text class="val f r3" x="56" y="210">HTML</text>
+  <rect x="270" y="205" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r3" x="270" y="198" width="75" height="14" opacity="0.67"/>
-  <text class="val fade r3" x="1224" y="210" text-anchor="end">9.5&#37;</text>
-  <text class="val fade r4" x="56" y="248">Vue</text>
-  <rect class="rule" x="270" y="243" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <text class="val f r3" x="1224" y="210" text-anchor="end">9.5&#37;</text>
+  <text class="val f r4" x="56" y="248">Vue</text>
+  <rect x="270" y="243" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r4" x="270" y="236" width="66" height="14" opacity="0.56"/>
-  <text class="val fade r4" x="1224" y="248" text-anchor="end">8.4&#37;</text>
-  <text class="val fade r5" x="56" y="286">C#</text>
-  <rect class="rule" x="270" y="281" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <text class="val f r4" x="1224" y="248" text-anchor="end">8.4&#37;</text>
+  <text class="val f r5" x="56" y="286">C#</text>
+  <rect x="270" y="281" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r5" x="270" y="274" width="42" height="14" opacity="0.45"/>
-  <text class="val fade r5" x="1224" y="286" text-anchor="end">5.3&#37;</text>
-  <text class="val fade r6" x="56" y="324">Dart</text>
-  <rect class="rule" x="270" y="319" width="790" height="1" stroke="none" fill="var(--rule)"/>
+  <text class="val f r5" x="1224" y="286" text-anchor="end">5.3&#37;</text>
+  <text class="val f r6" x="56" y="324">Dart</text>
+  <rect x="270" y="319" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r6" x="270" y="312" width="39" height="14" opacity="0.34"/>
-  <text class="val fade r6" x="1224" y="324" text-anchor="end">5.0&#37;</text>
+  <text class="val f r6" x="1224" y="324" text-anchor="end">5.0&#37;</text>
 </svg>

@@ -54,7 +54,7 @@ jobs:
 
       - name: Auf gültiges XML prüfen
         run: |
-          for f in assets/activity-*.svg assets/languages-*.svg assets/rhythm-*.svg; do
+          for f in assets/activity-*.svg assets/languages-*.svg; do
             python -c "import xml.dom.minidom,sys; xml.dom.minidom.parse(sys.argv[1])" "$f"
             echo "ok  $f"
           done

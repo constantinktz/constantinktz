@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/banner-light.svg">
-  <img src="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/banner-dark.svg" alt="Constantin Kautz, Fullstack. Backend Python, Java, C#. Frontend TypeScript, Vue. Mobile Dart, Flutter." width="100%">
+  <img src="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/banner-dark.svg" alt="Constantin Kautz, Fullstack. Backend Python, Java, C#. Frontend React, TypeScript, Vue. Mobile Dart, Flutter." width="100%">
 </picture>
 
 <picture>
@@ -57,27 +57,12 @@ Flutter-Apps und ein eigenes App-Skelett. Dazu Lead-Recherche, Proxy-Server und 
 </tr>
 </table>
 
-Öffentlich einsehbar sind die abgeschlossenen Kursprojekte aus CS50 Web:
-[Network](https://github.com/constantinktz/CS50W_Network),
-[Commerce](https://github.com/constantinktz/CS50W_commerce),
-[Mail](https://github.com/constantinktz/CS50W_mail),
-[Wiki](https://github.com/constantinktz/CS50W_wiki) und
-[Final Project](https://github.com/constantinktz/CS50W_Final_Project).
-
 ## Sprachen
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/languages-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/languages-light.svg">
   <img src="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/languages-dark.svg" alt="Sprachverteilung, je Repository gleich gewichtet" width="100%">
-</picture>
-
-## Rhythmus
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/rhythm-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/rhythm-light.svg">
-  <img src="https://raw.githubusercontent.com/constantinktz/constantinktz/main/assets/rhythm-dark.svg" alt="Verteilung der Beiträge über die Woche und neue Projekte pro Jahr" width="100%">
 </picture>
 
 ## Kontakt

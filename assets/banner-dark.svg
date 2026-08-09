@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 330" width="1280" height="330" role="img" aria-label="Constantin Kautz, Fullstack. Backend Python, Java, C#. Frontend TypeScript, Vue. Mobile Dart, Flutter.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 330" width="1280" height="330" role="img" aria-label="Constantin Kautz, Fullstack. Backend Python, Java, C#. Frontend React, TypeScript, Vue. Mobile Dart, Flutter.">
   <title>Constantin Kautz</title>
   <style>
     svg{
@@ -40,11 +40,11 @@
     <text class="key f k1" x="812" y="110">BACKEND</text>
     <text class="val f k1" x="952" y="110">Python  Java  C#</text>
     <text class="key f k2" x="812" y="152">FRONTEND</text>
-    <text class="val f k2" x="952" y="152">TypeScript  Vue</text>
+    <text class="val f k2" x="952" y="152">React  TypeScript  Vue</text>
     <text class="key f k3" x="812" y="194">MOBILE</text>
     <text class="val f k3" x="952" y="194">Dart  Flutter</text>
   </g>
 
   <path class="rule d" d="M56 268H1224"/>
-  <text class="pos f p" x="56" y="298">Fullstack. Python-Backends und KI, TypeScript-Frontends, Flutter auf Mobile.</text>
+  <text class="pos f p" x="56" y="298">Fullstack. Python-Backends und KI, React- und Vue-Frontends, Flutter auf Mobile.</text>
 </svg>
