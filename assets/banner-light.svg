@@ -1,17 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 330" width="1280" height="330" role="img" aria-label="Constantin Kautz, Fullstack. Backend Python, Java, C#. Frontend React, TypeScript, Vue. Mobile Dart, Flutter.">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 330" width="1280" height="330" role="img" aria-label="Constantin Kautz, Fullstack. Backend Python, Java, C#. Frontend React, TypeScript, Vue. Mobile Dart, Flutter.">
   <title>Constantin Kautz</title>
   <style>
     svg{
-      --bg:#FFFFFF; --text:#1F2328; --muted:#59636E; --rule:#D8DEE4;
+      --bg:#FFFFFF; --text:#1F2328; --muted:#59636E; --rule:#D8DEE4; --accent:#1A7F37;
       --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
       --sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     }
     .bg{fill:var(--bg)}
     .wm{font-family:var(--sans);font-weight:800;font-size:88px;letter-spacing:-3px;fill:var(--text)}
+    .hot{fill:var(--accent)}
     .key{font-family:var(--mono);font-size:16px;fill:var(--muted)}
     .val{font-family:var(--mono);font-size:19px;fill:var(--text)}
     .pos{font-family:var(--mono);font-size:17px;fill:var(--muted)}
     .rule{stroke:var(--rule);stroke-width:1}
+    .mark{fill:var(--accent)}
 
     /* Aufbau beim Laden, einmalig. Startwerte gedimmt statt null, damit der
        Banner auch dort lesbar bleibt, wo nur der erste Frame gerendert wird. */
@@ -25,16 +27,72 @@
     .k1{animation-delay:.26s}.k2{animation-delay:.33s}.k3{animation-delay:.40s}
     .p{animation-delay:.50s}
 
+    /* Dieselbe Lichtkante wie über der Heatmap, gleicher 14s-Takt: Hero und
+       Aktivitätsgrafik bewegen sich damit im selben Rhythmus. Die Kante lässt
+       die Buchstaben im Vorbeigehen im Akzent aufleuchten. Das Band parkt
+       danach hinter der Wortmarke, sonst blieben die letzten Buchstaben
+       dauerhaft im Akzent stehen. */
+    @keyframes hsweep{
+      0%{transform:translateX(56px);animation-timing-function:cubic-bezier(.32,.02,.28,1)}
+      30%{transform:translateX(830px)}
+      100%{transform:translateX(830px)}
+    }
+    @keyframes hedge{
+      0%{opacity:0}
+      1.5%{opacity:1}
+      15%{opacity:1}
+      20%{opacity:0}
+      100%{opacity:0}
+    }
+    #hb{animation:hsweep 14s linear infinite}
+    .sweep{animation:hsweep 14s linear infinite, hedge 14s linear infinite}
+
     @media (prefers-reduced-motion:reduce){
       .f,.r{animation:none;opacity:1;transform:none}
       .d{animation:none;stroke-dashoffset:0}
+      #hb,.sweep{animation:none}
+      .sweep{display:none}
     }
   </style>
 
+  <defs>
+    <g id="name">
+      <text class="wm" x="56" y="148">CONSTANTIN</text>
+      <text class="wm" x="56" y="236">KAUTZ</text>
+    </g>
+    <!-- Maske statt Clip: der Akzent läuft hinter der Kante weich aus,
+         statt mit harter Kante einzusetzen. -->
+    <linearGradient id="bandgrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".62" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="band">
+      <rect id="hb" x="-120" y="54" width="120" height="212" fill="url(#bandgrad)"/>
+    </mask>
+    <linearGradient id="hglow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1A7F37" stop-opacity="0"/>
+      <stop offset=".7" stop-color="#1A7F37" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#1A7F37" stop-opacity=".45"/>
+    </linearGradient>
+    <filter id="hbloom" x="-400%" y="-25%" width="900%" height="150%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
   <rect class="bg" width="1280" height="330"/>
 
-  <text class="wm r l1" x="56" y="148">CONSTANTIN</text>
-  <text class="wm r l2" x="56" y="236">KAUTZ</text>
+  <g class="r l1"><use href="#name" xlink:href="#name"/></g>
+  <g mask="url(#band)">
+    <text class="wm hot" x="56" y="148">CONSTANTIN</text>
+    <text class="wm hot" x="56" y="236">KAUTZ</text>
+  </g>
+
+  <g class="sweep">
+    <rect x="-130" y="60" width="130" height="200" fill="url(#hglow)"/>
+    <rect class="mark" x="-2" y="54" width="3" height="212" filter="url(#hbloom)"/>
+    <rect class="mark" x="-1" y="54" width="2" height="212"/>
+  </g>
 
   <g>
     <text class="key f k1" x="812" y="110">BACKEND</text>

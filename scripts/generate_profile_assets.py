@@ -14,10 +14,12 @@ privater Repos verlassen den Workflow nicht.
 Gestaltung: Swiss-technisch. Strenges Raster, scharfe Kanten (kein Radius),
 Haarlinien nur als Struktur, ein Akzent, Rang über Deckkraft statt über Farbe.
 
-Motion: Aufbau beim Laden, einmalig, keine Dauerschleifen. Die Heatmap wird von
-links nach rechts durch ein Portal aufgezogen. Eine helle Kante mit geblühtem
-Kern und nachlaufendem Schein wandert über das Raster, dahinter erscheinen die
-Beiträge.
+Motion: Die Heatmap wird von links nach rechts durch ein Portal aufgezogen. Eine
+helle Kante mit geblühtem Kern und nachlaufendem Schein wandert über das Raster,
+dahinter erscheinen die Beiträge. Der Zyklus dauert 14s: 4.2s Aufzug, rund 8s
+Standzeit, dann ein weiches Ausblenden und von vorn. Die Schleife ist nötig, weil
+GitHub intern über Turbo navigiert und das Bild dabei nicht neu lädt, eine
+einmalige Animation also nie wieder zu sehen wäre.
 
 Zwei Ebenen machen das möglich: das leere Kalendergitter liegt dauerhaft da, die
 Beitragsdaten stecken in einer zweiten Ebene hinter einem wachsenden clipPath.
@@ -267,25 +269,41 @@ def build_activity(cal, stats, pal):
            '       Daten selbst sind noch nicht sichtbar.',
            '       Das width-Attribut trägt die Endbreite, deshalb zeigt',
            '       prefers-reduced-motion sofort alles. */',
-           '    @keyframes portal{from{width:0}to{width:%dpx}}' % grid_w,
-           '    #pr{animation:portal 2.8s cubic-bezier(.32,.02,.28,1) both}',
-           '    /* Kante und Aufzugsgrenze teilen Dauer und Kurve, laufen also',
+           '    /* Der Reveal läuft in Schleife über 14s: 4.2s Aufzug, danach',
+           '       rund 8s Standzeit, dann blendet die Datenebene weich aus und',
+           '       der Aufzug beginnt neu. Die Heatmap ist damit den Großteil der',
+           '       Zeit vollständig lesbar, und die Bewegung kommt auch dann',
+           '       zurück, wenn GitHub intern über Turbo navigiert und das Bild',
+           '       nicht neu lädt. */',
+           '    @keyframes portal{',
+           '      0%{width:0;animation-timing-function:cubic-bezier(.32,.02,.28,1)}',
+           '      30%%{width:%dpx}' % grid_w,
+           '      94%%{width:%dpx}' % grid_w,
+           '      94.5%{width:0}',
+           '      100%{width:0}}',
+           '    #pr{animation:portal 14s linear infinite}',
+           '    @keyframes veil{0%,88%{opacity:1}94%{opacity:0}'
+           '94.5%,99.9%{opacity:0}100%{opacity:1}}',
+           '    .data{animation:veil 14s linear infinite}',
+           '    /* Kante und Aufzugsgrenze teilen Zyklus und Kurve, laufen also',
            '       exakt synchron. */',
            '    @keyframes edge{',
-           '      0%{transform:translateX(0);opacity:0}',
-           '      4%{opacity:1}',
-           '      88%{opacity:1}',
+           '      0%{transform:translateX(0);opacity:0;'
+           'animation-timing-function:cubic-bezier(.32,.02,.28,1)}',
+           '      1.2%{opacity:1}',
+           '      27%{opacity:1}',
+           '      30%%{transform:translateX(%dpx);opacity:0}' % grid_w,
            '      100%%{transform:translateX(%dpx);opacity:0}}' % grid_w,
-           '    .edge{animation:edge 2.8s cubic-bezier(.32,.02,.28,1) both}',
+           '    .edge{animation:edge 14s linear infinite}',
            '    @keyframes fade{from{opacity:.25}to{opacity:1}}',
            '    @keyframes draw{from{stroke-dashoffset:%d}to{stroke-dashoffset:0}}' % span,
            '    .f{animation:fade .7s ease-out both}',
            '    .d{stroke-dasharray:%d;animation:draw .9s cubic-bezier(.2,.8,.25,1) both}' % span,
-           '    .s1{animation-delay:2.5s}.s2{animation-delay:2.62s}.s3{animation-delay:2.74s}',
-           '    .s4{animation-delay:2.86s}.s5{animation-delay:2.98s}',
+           '    .s1{animation-delay:3.9s}.s2{animation-delay:4.02s}.s3{animation-delay:4.14s}',
+           '    .s4{animation-delay:4.26s}.s5{animation-delay:4.38s}',
            '',
            '    @media (prefers-reduced-motion:reduce){',
-           '      #pr{animation:none}',
+           '      #pr{animation:none}\n      .data{animation:none;opacity:1}',
            '      .edge{display:none}',
            '      .f{animation:none;opacity:1}',
            '      .d{animation:none;stroke-dashoffset:0}',
@@ -359,7 +377,8 @@ def build_activity(cal, stats, pal):
             % (GRID_X - 12, GRID_Y + idx * STEP + CELL - 4, name))
 
     add('  <use href="#skel" xlink:href="#skel"/>')
-    add('  <g clip-path="url(#portal)"><use href="#data" xlink:href="#data"/></g>')
+    add('  <g class="data" clip-path="url(#portal)">'
+        '<use href="#data" xlink:href="#data"/></g>')
 
     # Portalkante: breiter nachlaufender Schein, geblühter Kern und harte Linie
     # genau auf der Aufzugsgrenze.
