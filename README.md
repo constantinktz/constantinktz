@@ -107,6 +107,8 @@ Heatmap und Sprachverteilung sind keine eingebetteten Fremddienste, sondern SVGs
 
 Reine Standardbibliothek, kein `pip`-Schritt, keine externe Bildgenerierung. Was hier steht, hängt an keinem fremden Dienst, der morgen abschaltet oder rate-limitiert.
 
+Einrichtung und Begründung der Metriken: [`SETUP.md`](SETUP.md)
+
 </details>
 
 <details>
