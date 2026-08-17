@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 384" width="1280" height="384" role="img" aria-label="989 Beiträge in den letzten zwölf Monaten">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 384" width="1280" height="384" role="img" aria-label="1013 Beiträge in den letzten zwölf Monaten">
   <title>Beiträge</title>
   <style>
     svg{--bg:#0D1117;--text:#E6EDF3;--muted:#7D8590;--rule:#21262D;--accent:#39D353;--mono:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;--sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif}
@@ -434,6 +434,7 @@
       <rect x="1163" y="180" width="18" height="18" fill="#161B22"/>
       <rect x="1163" y="201" width="18" height="18" fill="#161B22"/>
       <rect x="1184" y="222" width="18" height="18" fill="#161B22"/>
+      <rect x="1184" y="96" width="18" height="18" fill="#161B22"/>
     </g>
     <g id="data">
       <rect x="92" y="138" width="18" height="18" fill="#0E4429"/>
@@ -541,6 +542,8 @@
       <rect x="1163" y="138" width="18" height="18" fill="#006D32"/>
       <rect x="1163" y="159" width="18" height="18" fill="#0E4429"/>
       <rect x="1163" y="180" width="18" height="18" fill="#0E4429"/>
+      <rect x="1184" y="222" width="18" height="18" fill="#006D32"/>
+      <rect x="1184" y="96" width="18" height="18" fill="#0E4429"/>
     </g>
     <clipPath id="portal">
       <rect id="pr" x="92" y="66" width="1110" height="174"/>
@@ -576,13 +579,13 @@
   <rect class="f s5" x="1179" y="264" width="12" height="12" fill="#39D353"/>
   <text class="lbl f s5" x="1202" y="274">mehr</text>
   <path class="rule d" d="M56 284H1224"/>
-  <text class="big f s1" x="56" y="326">989</text>
+  <text class="big f s1" x="56" y="326">1013</text>
   <text class="lbl f s1" x="56" y="350">Beiträge</text>
-  <text class="big f s2" x="289" y="326">0</text>
+  <text class="big f s2" x="289" y="326">2</text>
   <text class="lbl f s2" x="289" y="350">Serie aktuell</text>
   <text class="big f s3" x="522" y="326">29</text>
   <text class="lbl f s3" x="522" y="350">Serie längste</text>
-  <text class="big f s4" x="755" y="326">105</text>
+  <text class="big f s4" x="755" y="326">107</text>
   <text class="lbl f s4" x="755" y="350">Aktive Tage</text>
   <text class="big f s5" x="988" y="326">62</text>
   <text class="lbl f s5" x="988" y="350">Bester Tag (2. Apr)</text>
