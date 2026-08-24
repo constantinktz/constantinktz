@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 376" width="1280" height="376" role="img" aria-label="Sprachverteilung über 40 Repositories">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 376" width="1280" height="376" role="img" aria-label="Sprachverteilung über 41 Repositories">
   <title>Sprachen</title>
   <style>
     svg{--bg:#0D1117;--text:#E6EDF3;--muted:#7D8590;--rule:#21262D;--accent:#39D353;--mono:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace}
@@ -26,34 +26,34 @@
     }
   </style>
   <rect class="bg" width="1280" height="376"/>
-  <text class="cap f" x="56" y="38">Sprachen über 40 Repositories, je Repository gleich gewichtet</text>
+  <text class="cap f" x="56" y="38">Sprachen über 41 Repositories, je Repository gleich gewichtet</text>
   <path class="rule d" d="M56 56H1224"/>
   <text class="val f r0" x="56" y="96">TypeScript</text>
   <rect x="270" y="91" width="790" height="1" fill="var(--rule)"/>
-  <rect class="bar grow r0" x="270" y="84" width="198" height="14" opacity="1.00"/>
-  <text class="val f r0" x="1224" y="96" text-anchor="end">25.1&#37;</text>
+  <rect class="bar grow r0" x="270" y="84" width="212" height="14" opacity="1.00"/>
+  <text class="val f r0" x="1224" y="96" text-anchor="end">26.9&#37;</text>
   <text class="val f r1" x="56" y="134">Python</text>
   <rect x="270" y="129" width="790" height="1" fill="var(--rule)"/>
-  <rect class="bar grow r1" x="270" y="122" width="179" height="14" opacity="0.89"/>
-  <text class="val f r1" x="1224" y="134" text-anchor="end">22.7&#37;</text>
+  <rect class="bar grow r1" x="270" y="122" width="175" height="14" opacity="0.89"/>
+  <text class="val f r1" x="1224" y="134" text-anchor="end">22.1&#37;</text>
   <text class="val f r2" x="56" y="172">JavaScript</text>
   <rect x="270" y="167" width="790" height="1" fill="var(--rule)"/>
-  <rect class="bar grow r2" x="270" y="160" width="78" height="14" opacity="0.78"/>
-  <text class="val f r2" x="1224" y="172" text-anchor="end">9.9&#37;</text>
+  <rect class="bar grow r2" x="270" y="160" width="76" height="14" opacity="0.78"/>
+  <text class="val f r2" x="1224" y="172" text-anchor="end">9.7&#37;</text>
   <text class="val f r3" x="56" y="210">HTML</text>
   <rect x="270" y="205" width="790" height="1" fill="var(--rule)"/>
-  <rect class="bar grow r3" x="270" y="198" width="73" height="14" opacity="0.67"/>
-  <text class="val f r3" x="1224" y="210" text-anchor="end">9.2&#37;</text>
+  <rect class="bar grow r3" x="270" y="198" width="71" height="14" opacity="0.67"/>
+  <text class="val f r3" x="1224" y="210" text-anchor="end">9.0&#37;</text>
   <text class="val f r4" x="56" y="248">Vue</text>
   <rect x="270" y="243" width="790" height="1" fill="var(--rule)"/>
-  <rect class="bar grow r4" x="270" y="236" width="65" height="14" opacity="0.56"/>
-  <text class="val f r4" x="1224" y="248" text-anchor="end">8.2&#37;</text>
+  <rect class="bar grow r4" x="270" y="236" width="63" height="14" opacity="0.56"/>
+  <text class="val f r4" x="1224" y="248" text-anchor="end">8.0&#37;</text>
   <text class="val f r5" x="56" y="286">C#</text>
   <rect x="270" y="281" width="790" height="1" fill="var(--rule)"/>
-  <rect class="bar grow r5" x="270" y="274" width="41" height="14" opacity="0.45"/>
-  <text class="val f r5" x="1224" y="286" text-anchor="end">5.2&#37;</text>
+  <rect class="bar grow r5" x="270" y="274" width="40" height="14" opacity="0.45"/>
+  <text class="val f r5" x="1224" y="286" text-anchor="end">5.0&#37;</text>
   <text class="val f r6" x="56" y="324">Dart</text>
   <rect x="270" y="319" width="790" height="1" fill="var(--rule)"/>
-  <rect class="bar grow r6" x="270" y="312" width="38" height="14" opacity="0.34"/>
-  <text class="val f r6" x="1224" y="324" text-anchor="end">4.8&#37;</text>
+  <rect class="bar grow r6" x="270" y="312" width="37" height="14" opacity="0.34"/>
+  <text class="val f r6" x="1224" y="324" text-anchor="end">4.7&#37;</text>
 </svg>
