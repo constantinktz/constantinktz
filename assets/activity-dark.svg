@@ -57,18 +57,18 @@
   <defs>
     <g id="skel">
       <text class="mon" x="92" y="82">Aug</text>
-      <text class="mon" x="134" y="82">Sep</text>
-      <text class="mon" x="218" y="82">Okt</text>
-      <text class="mon" x="302" y="82">Nov</text>
-      <text class="mon" x="407" y="82">Dez</text>
-      <text class="mon" x="491" y="82">Jan</text>
-      <text class="mon" x="575" y="82">Feb</text>
-      <text class="mon" x="659" y="82">Mär</text>
-      <text class="mon" x="764" y="82">Apr</text>
-      <text class="mon" x="848" y="82">Mai</text>
-      <text class="mon" x="953" y="82">Jun</text>
-      <text class="mon" x="1037" y="82">Jul</text>
-      <text class="mon" x="1121" y="82">Aug</text>
+      <text class="mon" x="113" y="82">Sep</text>
+      <text class="mon" x="197" y="82">Okt</text>
+      <text class="mon" x="281" y="82">Nov</text>
+      <text class="mon" x="386" y="82">Dez</text>
+      <text class="mon" x="470" y="82">Jan</text>
+      <text class="mon" x="554" y="82">Feb</text>
+      <text class="mon" x="638" y="82">Mär</text>
+      <text class="mon" x="743" y="82">Apr</text>
+      <text class="mon" x="827" y="82">Mai</text>
+      <text class="mon" x="932" y="82">Jun</text>
+      <text class="mon" x="1016" y="82">Jul</text>
+      <text class="mon" x="1100" y="82">Aug</text>
       <rect x="92" y="222" width="18" height="18" fill="#161B22"/>
       <rect x="92" y="96" width="18" height="18" fill="#161B22"/>
       <rect x="92" y="117" width="18" height="18" fill="#161B22"/>
@@ -434,131 +434,124 @@
       <rect x="1163" y="180" width="18" height="18" fill="#161B22"/>
       <rect x="1163" y="201" width="18" height="18" fill="#161B22"/>
       <rect x="1184" y="222" width="18" height="18" fill="#161B22"/>
-      <rect x="1184" y="96" width="18" height="18" fill="#161B22"/>
-      <rect x="1184" y="117" width="18" height="18" fill="#161B22"/>
-      <rect x="1184" y="138" width="18" height="18" fill="#161B22"/>
-      <rect x="1184" y="159" width="18" height="18" fill="#161B22"/>
-      <rect x="1184" y="180" width="18" height="18" fill="#161B22"/>
-      <rect x="1184" y="201" width="18" height="18" fill="#161B22"/>
     </g>
     <g id="data">
-      <rect x="92" y="96" width="18" height="18" fill="#0E4429"/>
-      <rect x="176" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="155" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="155" y="201" width="18" height="18" fill="#0E4429"/>
+      <rect x="176" y="222" width="18" height="18" fill="#0E4429"/>
+      <rect x="176" y="180" width="18" height="18" fill="#0E4429"/>
       <rect x="176" y="201" width="18" height="18" fill="#0E4429"/>
-      <rect x="197" y="222" width="18" height="18" fill="#0E4429"/>
+      <rect x="197" y="222" width="18" height="18" fill="#006D32"/>
+      <rect x="197" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="197" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="197" y="138" width="18" height="18" fill="#0E4429"/>
+      <rect x="197" y="159" width="18" height="18" fill="#0E4429"/>
       <rect x="197" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="197" y="201" width="18" height="18" fill="#0E4429"/>
-      <rect x="218" y="222" width="18" height="18" fill="#006D32"/>
       <rect x="218" y="96" width="18" height="18" fill="#0E4429"/>
       <rect x="218" y="117" width="18" height="18" fill="#0E4429"/>
-      <rect x="218" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="218" y="159" width="18" height="18" fill="#0E4429"/>
       <rect x="218" y="180" width="18" height="18" fill="#0E4429"/>
+      <rect x="239" y="222" width="18" height="18" fill="#0E4429"/>
       <rect x="239" y="96" width="18" height="18" fill="#0E4429"/>
       <rect x="239" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="239" y="138" width="18" height="18" fill="#0E4429"/>
+      <rect x="239" y="159" width="18" height="18" fill="#0E4429"/>
       <rect x="239" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="260" y="222" width="18" height="18" fill="#0E4429"/>
       <rect x="260" y="96" width="18" height="18" fill="#0E4429"/>
-      <rect x="260" y="117" width="18" height="18" fill="#0E4429"/>
-      <rect x="260" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="260" y="159" width="18" height="18" fill="#0E4429"/>
-      <rect x="260" y="180" width="18" height="18" fill="#0E4429"/>
+      <rect x="260" y="201" width="18" height="18" fill="#0E4429"/>
       <rect x="281" y="96" width="18" height="18" fill="#0E4429"/>
-      <rect x="281" y="201" width="18" height="18" fill="#0E4429"/>
-      <rect x="302" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="281" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="302" y="222" width="18" height="18" fill="#0E4429"/>
       <rect x="302" y="117" width="18" height="18" fill="#0E4429"/>
-      <rect x="323" y="222" width="18" height="18" fill="#0E4429"/>
+      <rect x="302" y="201" width="18" height="18" fill="#0E4429"/>
       <rect x="323" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="323" y="138" width="18" height="18" fill="#0E4429"/>
+      <rect x="323" y="159" width="18" height="18" fill="#0E4429"/>
+      <rect x="323" y="180" width="18" height="18" fill="#0E4429"/>
       <rect x="323" y="201" width="18" height="18" fill="#0E4429"/>
-      <rect x="344" y="117" width="18" height="18" fill="#0E4429"/>
       <rect x="344" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="344" y="159" width="18" height="18" fill="#0E4429"/>
-      <rect x="344" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="344" y="201" width="18" height="18" fill="#0E4429"/>
+      <rect x="365" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="365" y="117" width="18" height="18" fill="#0E4429"/>
       <rect x="365" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="386" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="365" y="159" width="18" height="18" fill="#0E4429"/>
+      <rect x="365" y="180" width="18" height="18" fill="#0E4429"/>
+      <rect x="365" y="201" width="18" height="18" fill="#0E4429"/>
+      <rect x="386" y="222" width="18" height="18" fill="#006D32"/>
       <rect x="386" y="117" width="18" height="18" fill="#0E4429"/>
       <rect x="386" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="386" y="159" width="18" height="18" fill="#0E4429"/>
-      <rect x="386" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="386" y="201" width="18" height="18" fill="#0E4429"/>
-      <rect x="407" y="222" width="18" height="18" fill="#006D32"/>
-      <rect x="407" y="117" width="18" height="18" fill="#0E4429"/>
-      <rect x="407" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="428" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="449" y="96" width="18" height="18" fill="#0E4429"/>
-      <rect x="449" y="117" width="18" height="18" fill="#0E4429"/>
-      <rect x="491" y="201" width="18" height="18" fill="#0E4429"/>
-      <rect x="512" y="96" width="18" height="18" fill="#0E4429"/>
-      <rect x="596" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="680" y="117" width="18" height="18" fill="#0E4429"/>
-      <rect x="701" y="222" width="18" height="18" fill="#006D32"/>
-      <rect x="743" y="159" width="18" height="18" fill="#39D353"/>
-      <rect x="743" y="180" width="18" height="18" fill="#006D32"/>
-      <rect x="785" y="96" width="18" height="18" fill="#0E4429"/>
-      <rect x="785" y="138" width="18" height="18" fill="#006D32"/>
-      <rect x="806" y="222" width="18" height="18" fill="#0E4429"/>
-      <rect x="869" y="138" width="18" height="18" fill="#006D32"/>
-      <rect x="869" y="159" width="18" height="18" fill="#006D32"/>
-      <rect x="869" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="911" y="222" width="18" height="18" fill="#0E4429"/>
-      <rect x="932" y="96" width="18" height="18" fill="#0E4429"/>
-      <rect x="932" y="117" width="18" height="18" fill="#0E4429"/>
-      <rect x="932" y="180" width="18" height="18" fill="#006D32"/>
-      <rect x="953" y="201" width="18" height="18" fill="#0E4429"/>
-      <rect x="1016" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="407" y="180" width="18" height="18" fill="#0E4429"/>
+      <rect x="428" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="428" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="470" y="201" width="18" height="18" fill="#0E4429"/>
+      <rect x="491" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="575" y="180" width="18" height="18" fill="#0E4429"/>
+      <rect x="659" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="680" y="222" width="18" height="18" fill="#006D32"/>
+      <rect x="722" y="159" width="18" height="18" fill="#39D353"/>
+      <rect x="722" y="180" width="18" height="18" fill="#006D32"/>
+      <rect x="764" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="764" y="138" width="18" height="18" fill="#006D32"/>
+      <rect x="785" y="222" width="18" height="18" fill="#0E4429"/>
+      <rect x="848" y="138" width="18" height="18" fill="#006D32"/>
+      <rect x="848" y="159" width="18" height="18" fill="#006D32"/>
+      <rect x="848" y="180" width="18" height="18" fill="#0E4429"/>
+      <rect x="890" y="222" width="18" height="18" fill="#0E4429"/>
+      <rect x="911" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="911" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="911" y="180" width="18" height="18" fill="#006D32"/>
+      <rect x="932" y="201" width="18" height="18" fill="#0E4429"/>
+      <rect x="995" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="995" y="138" width="18" height="18" fill="#0E4429"/>
       <rect x="1016" y="138" width="18" height="18" fill="#0E4429"/>
+      <rect x="1016" y="159" width="18" height="18" fill="#006D32"/>
+      <rect x="1016" y="180" width="18" height="18" fill="#0E4429"/>
+      <rect x="1016" y="201" width="18" height="18" fill="#26A641"/>
+      <rect x="1037" y="222" width="18" height="18" fill="#0E4429"/>
+      <rect x="1037" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="1037" y="117" width="18" height="18" fill="#26A641"/>
       <rect x="1037" y="138" width="18" height="18" fill="#0E4429"/>
       <rect x="1037" y="159" width="18" height="18" fill="#006D32"/>
       <rect x="1037" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="1037" y="201" width="18" height="18" fill="#26A641"/>
-      <rect x="1058" y="222" width="18" height="18" fill="#0E4429"/>
-      <rect x="1058" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="1037" y="201" width="18" height="18" fill="#006D32"/>
+      <rect x="1058" y="222" width="18" height="18" fill="#006D32"/>
+      <rect x="1058" y="96" width="18" height="18" fill="#26A641"/>
       <rect x="1058" y="117" width="18" height="18" fill="#26A641"/>
-      <rect x="1058" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="1058" y="159" width="18" height="18" fill="#006D32"/>
-      <rect x="1058" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="1058" y="201" width="18" height="18" fill="#006D32"/>
-      <rect x="1079" y="222" width="18" height="18" fill="#006D32"/>
-      <rect x="1079" y="96" width="18" height="18" fill="#26A641"/>
-      <rect x="1079" y="117" width="18" height="18" fill="#26A641"/>
-      <rect x="1079" y="138" width="18" height="18" fill="#006D32"/>
+      <rect x="1058" y="138" width="18" height="18" fill="#006D32"/>
+      <rect x="1058" y="159" width="18" height="18" fill="#0E4429"/>
+      <rect x="1058" y="180" width="18" height="18" fill="#006D32"/>
+      <rect x="1058" y="201" width="18" height="18" fill="#26A641"/>
+      <rect x="1079" y="222" width="18" height="18" fill="#39D353"/>
+      <rect x="1079" y="96" width="18" height="18" fill="#006D32"/>
+      <rect x="1079" y="117" width="18" height="18" fill="#006D32"/>
+      <rect x="1079" y="138" width="18" height="18" fill="#0E4429"/>
       <rect x="1079" y="159" width="18" height="18" fill="#0E4429"/>
-      <rect x="1079" y="180" width="18" height="18" fill="#006D32"/>
-      <rect x="1079" y="201" width="18" height="18" fill="#26A641"/>
-      <rect x="1100" y="222" width="18" height="18" fill="#39D353"/>
-      <rect x="1100" y="96" width="18" height="18" fill="#006D32"/>
+      <rect x="1079" y="180" width="18" height="18" fill="#26A641"/>
+      <rect x="1079" y="201" width="18" height="18" fill="#39D353"/>
+      <rect x="1100" y="222" width="18" height="18" fill="#26A641"/>
+      <rect x="1100" y="96" width="18" height="18" fill="#39D353"/>
       <rect x="1100" y="117" width="18" height="18" fill="#006D32"/>
       <rect x="1100" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="1100" y="159" width="18" height="18" fill="#0E4429"/>
-      <rect x="1100" y="180" width="18" height="18" fill="#26A641"/>
+      <rect x="1100" y="180" width="18" height="18" fill="#006D32"/>
       <rect x="1100" y="201" width="18" height="18" fill="#39D353"/>
       <rect x="1121" y="222" width="18" height="18" fill="#26A641"/>
-      <rect x="1121" y="96" width="18" height="18" fill="#39D353"/>
+      <rect x="1121" y="96" width="18" height="18" fill="#26A641"/>
       <rect x="1121" y="117" width="18" height="18" fill="#006D32"/>
-      <rect x="1121" y="138" width="18" height="18" fill="#0E4429"/>
+      <rect x="1121" y="138" width="18" height="18" fill="#006D32"/>
+      <rect x="1121" y="159" width="18" height="18" fill="#0E4429"/>
       <rect x="1121" y="180" width="18" height="18" fill="#006D32"/>
-      <rect x="1121" y="201" width="18" height="18" fill="#39D353"/>
-      <rect x="1142" y="222" width="18" height="18" fill="#26A641"/>
+      <rect x="1121" y="201" width="18" height="18" fill="#0E4429"/>
+      <rect x="1142" y="222" width="18" height="18" fill="#006D32"/>
       <rect x="1142" y="96" width="18" height="18" fill="#26A641"/>
       <rect x="1142" y="117" width="18" height="18" fill="#006D32"/>
-      <rect x="1142" y="138" width="18" height="18" fill="#006D32"/>
+      <rect x="1142" y="138" width="18" height="18" fill="#39D353"/>
       <rect x="1142" y="159" width="18" height="18" fill="#0E4429"/>
-      <rect x="1142" y="180" width="18" height="18" fill="#006D32"/>
+      <rect x="1142" y="180" width="18" height="18" fill="#0E4429"/>
       <rect x="1142" y="201" width="18" height="18" fill="#0E4429"/>
       <rect x="1163" y="222" width="18" height="18" fill="#006D32"/>
-      <rect x="1163" y="96" width="18" height="18" fill="#26A641"/>
-      <rect x="1163" y="117" width="18" height="18" fill="#006D32"/>
-      <rect x="1163" y="138" width="18" height="18" fill="#39D353"/>
-      <rect x="1163" y="159" width="18" height="18" fill="#0E4429"/>
-      <rect x="1163" y="180" width="18" height="18" fill="#0E4429"/>
-      <rect x="1163" y="201" width="18" height="18" fill="#0E4429"/>
-      <rect x="1184" y="222" width="18" height="18" fill="#006D32"/>
-      <rect x="1184" y="96" width="18" height="18" fill="#0E4429"/>
-      <rect x="1184" y="117" width="18" height="18" fill="#0E4429"/>
-      <rect x="1184" y="138" width="18" height="18" fill="#0E4429"/>
-      <rect x="1184" y="159" width="18" height="18" fill="#39D353"/>
-      <rect x="1184" y="180" width="18" height="18" fill="#26A641"/>
+      <rect x="1163" y="96" width="18" height="18" fill="#0E4429"/>
+      <rect x="1163" y="117" width="18" height="18" fill="#0E4429"/>
+      <rect x="1163" y="138" width="18" height="18" fill="#0E4429"/>
+      <rect x="1163" y="159" width="18" height="18" fill="#39D353"/>
+      <rect x="1163" y="180" width="18" height="18" fill="#26A641"/>
     </g>
     <clipPath id="portal">
       <rect id="pr" x="92" y="66" width="1110" height="174"/>
@@ -596,11 +589,11 @@
   <path class="rule d" d="M56 284H1224"/>
   <text class="big f s1" x="56" y="326">1334</text>
   <text class="lbl f s1" x="56" y="350">Beiträge</text>
-  <text class="big f s2" x="289" y="326">22</text>
+  <text class="big f s2" x="289" y="326">0</text>
   <text class="lbl f s2" x="289" y="350">Serie aktuell</text>
   <text class="big f s3" x="522" y="326">29</text>
   <text class="lbl f s3" x="522" y="350">Serie längste</text>
-  <text class="big f s4" x="755" y="326">117</text>
+  <text class="big f s4" x="755" y="326">116</text>
   <text class="lbl f s4" x="755" y="350">Aktive Tage</text>
   <text class="big f s5" x="988" y="326">81</text>
   <text class="lbl f s5" x="988" y="350">Bester Tag (1. Aug)</text>
