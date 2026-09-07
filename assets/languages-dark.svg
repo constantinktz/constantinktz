@@ -39,7 +39,7 @@
   <text class="val f r2" x="56" y="172">JavaScript</text>
   <rect x="270" y="167" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r2" x="270" y="160" width="73" height="14" opacity="0.78"/>
-  <text class="val f r2" x="1224" y="172" text-anchor="end">9.2&#37;</text>
+  <text class="val f r2" x="1224" y="172" text-anchor="end">9.3&#37;</text>
   <text class="val f r3" x="56" y="210">HTML</text>
   <rect x="270" y="205" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r3" x="270" y="198" width="68" height="14" opacity="0.67"/>
