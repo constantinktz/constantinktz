@@ -30,8 +30,8 @@
   <path class="rule d" d="M56 56H1224"/>
   <text class="val f r0" x="56" y="96">TypeScript</text>
   <rect x="270" y="91" width="790" height="1" fill="var(--rule)"/>
-  <rect class="bar grow r0" x="270" y="84" width="242" height="14" opacity="1.00"/>
-  <text class="val f r0" x="1224" y="96" text-anchor="end">30.6&#37;</text>
+  <rect class="bar grow r0" x="270" y="84" width="241" height="14" opacity="1.00"/>
+  <text class="val f r0" x="1224" y="96" text-anchor="end">30.5&#37;</text>
   <text class="val f r1" x="56" y="134">Python</text>
   <rect x="270" y="129" width="790" height="1" fill="var(--rule)"/>
   <rect class="bar grow r1" x="270" y="122" width="170" height="14" opacity="0.89"/>
