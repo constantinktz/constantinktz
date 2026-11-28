@@ -439,6 +439,7 @@
       <rect x="1184" y="138" width="18" height="18" fill="#161B22"/>
       <rect x="1184" y="159" width="18" height="18" fill="#161B22"/>
       <rect x="1184" y="180" width="18" height="18" fill="#161B22"/>
+      <rect x="1184" y="201" width="18" height="18" fill="#161B22"/>
     </g>
     <g id="data">
       <rect x="92" y="138" width="18" height="18" fill="#0E4429"/>
@@ -646,7 +647,7 @@
   <path class="rule d" d="M56 284H1224"/>
   <text class="big f s1" x="56" y="326">6437</text>
   <text class="lbl f s1" x="56" y="350">Beiträge</text>
-  <text class="big f s2" x="289" y="326">8</text>
+  <text class="big f s2" x="289" y="326">0</text>
   <text class="lbl f s2" x="289" y="350">Serie aktuell</text>
   <text class="big f s3" x="522" y="326">61</text>
   <text class="lbl f s3" x="522" y="350">Serie längste</text>
